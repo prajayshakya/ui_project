@@ -1,10 +1,15 @@
 angular.module('app').service('titleService',["$http",function($http){
     var dela = this;
+    this.currentId = null;
     
-    $http.get("/service/INVENTORY_TYPE/:ID").then(function(response){
+    this.getItemList = function(){
+        var url = "/service/INVENTORY_TYPE/"+this.currentId;
+        $http.get(url).then(function(response){
             
-                dela.inventoryTypes = response.data;
+                dela.inventoryTitle = response.data;
                 console.log(dela.inventoryTitle);
         
     });
+    }
+    
 }]);

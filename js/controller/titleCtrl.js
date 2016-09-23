@@ -1,6 +1,10 @@
-angular.module('app').controller("titleCtrl",["$scope", "titleService",function($scope, titleService) {
-    $scope.inventoryTitle="";
+angular.module('app').controller("titleCtrl",["$scope", "titleService","navService",function($scope, titleService, navService) {
+    //alert();
     
+    $scope.title = "Welcome to BestBuy of Cubic";
+    
+    $scope.inventoryTitle="";
+    $scope.inventoryType="";
     console.log("From controller");
     console.log(navService.inventoryTitle);
    
@@ -22,7 +26,20 @@ angular.module('app').controller("titleCtrl",["$scope", "titleService",function(
         }
     });
     
-    
+    $scope.test=function(id, type){
+//        alert(id);
+//        alert(type);
+      
+        var itemId = id;
+        var itemType = type;
+        titleService.currentId = id;
+        titleService.currentType = type;
+        titleService.getItemList();
+        
+       $scope.title= type;
+        //alert($scope.title);
+
+    }
        
 }]);
 

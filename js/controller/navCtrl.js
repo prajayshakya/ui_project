@@ -1,6 +1,6 @@
 angular.module('app').controller("navCtrl",["$scope", "navService",function($scope, navService) {
     $scope.inventoryTypes="";
-    $scope.inventoryTitle="";
+   
     console.log("From controller");
     console.log(navService.inventoryTypes);
    
