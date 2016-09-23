@@ -1,0 +1,39 @@
+<html ng-app='app'>
+    <title>CubicBestBuy</title>
+    <body>
+        <div id='container'>
+            
+            <div class='header'>
+            header goes here
+            </div>
+            
+            <div class ='dyn_header'>
+            <title-bar></title-bar>
+            </div>
+            
+            <div class='sub_cont'>
+                <div class='nav_bar' ng-controller = "navCtrl" >
+  
+                    <nav-bar></nav-bar>                 
+                    
+                </div>
+                <div id='main_cont'>maincontent (ng-model)
+                </div>
+            </div>
+            
+            <div class='footer'>footer goes here
+            </div>
+            
+        </div>
+    </body>
+    <link rel='stylesheet' href='/css/style.css'>
+    <link rel='stylesheet' href='/css/nav_style.css'>
+    <script type='text/javascript' src='/node_modules/angular/angular.js'></script>
+    <script type = 'text/javascript' src='/js/module.js'></script>
+    <script type='text/javascript' src='/js/controller/navCtrl.js'></script>
+    <script type='text/javascript' src='/js/directive/nav_directive.js'></script>
+    <script type='text/javascript' src='/js/services/serviceNavigation.js'></script>
+    <script type='text/javascript' src='/js/services/service_id.js'></script>
+    <script type='text/javascript' src='/js/directive/title_directive.js'></script>
+     
+</html>
