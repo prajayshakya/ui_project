@@ -55,6 +55,25 @@ app.get("/service/INVENTORY_TYPE/:ID", function(req,res,next){
         });
     });
 });
+
+app.get("/service/itemtype/:inventory_type", function(req,res,next){
+   //Array to store dynamic parameters
+    var ids = [];
+    var INVENTORY_ID = req.params.inventory_type;
+    ids.push(INVENTORY_ID);
+    var query = "select * from itemtype where inventory_type = ?";
+    req.getConnection(function(err, connection){
+            if (err) return next(err);
+    connection.query(query,ids,function(err,results){
+       if(err){
+           console.log(err);
+           return next("MY SQL error, check you query");
+       } 
+        res.json(results);
+        });
+    });
+});
+
 //Launching application on localhost:8080;
 app.listen(8080, function(){
     console.log('server loaded on port 8080');

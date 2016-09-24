@@ -3,7 +3,7 @@ angular.module('app').service('titleService',["$http",function($http){
     this.currentId = null;
     
     this.getItemList = function(){
-        var url = "/service/INVENTORY_TYPE/"+this.currentId;
+        var url = "/service/INVENTORY_TYPE/"+dela.currentId;
         $http.get(url).then(function(response){
             
                 dela.inventoryTitle = response.data;
