@@ -24,7 +24,7 @@
      width:180px;
     height: 500px;
 */
-    width:15%;
+    width:22.5%;
     height: 500px;
     float:left;
 /*    padding: 10px;*/
@@ -36,10 +36,10 @@
      width:580px;
     height: 500px;
 */
-    width:85%;
+    width:77.5%;
     height: 500px;
     float:right;
-    background-color: powderblue;
+    
 }
 
 .footer{
@@ -47,4 +47,13 @@
     padding:10px;
     color:gray;
     background-color: bisque;
+}
+
+/*
+
+Images
+*/
+.img{
+    height: 180;
+    width=140;
 }

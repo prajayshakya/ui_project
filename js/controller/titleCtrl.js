@@ -1,5 +1,5 @@
 angular.module('app').controller("titleCtrl",["$scope", "titleService","navService","mainService",function($scope, titleService, navService, mainService) {
-    alert();
+    //alert();
     
     $scope.title = "Welcome to BestBuy of Cubic";
     
@@ -47,35 +47,21 @@ angular.module('app').controller("titleCtrl",["$scope", "titleService","navServi
     });
     
     
-//    $scope.test=function(id, type){
-////        alert(id);
-////        alert(type);
-//      
-//        var itemId = id;
-//        var itemType = type;
-//        titleService.currentId = id;
-//        titleService.currentType = type;
-//        titleService.getItemList();
-//        
-//       $scope.title= type;
-//        //alert($scope.title);
-//
-//    }
-//    
+
     $scope.test=function(id, type){
 //        alert(id);
 //        alert(type);
       
-//        var itemId = id;
-//        var itemType = type;
+     
         titleService.currentId = id;
-        //titleService.currentType = type;
         titleService.getItemList();
+        
         mainService.currentId = id;
         mainService.getMainList();
         
        $scope.title= type;
         
+      
         
         //alert($scope.title);
 

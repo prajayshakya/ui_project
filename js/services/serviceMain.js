@@ -8,7 +8,7 @@ angular.module('app').service('mainService',["$http",function($http){
         $http.get(url).then(function(response){
             
                 opt.inventoryMain = response.data;
-                alert("ThIS IS FROM SerVICE")
+                //alert("ThIS IS FROM SerVICE")
         });
     }
     

@@ -9,15 +9,16 @@
             
             <div class ='dyn_header' >
 <!--            <title-bar></title-bar>-->
-                <h3>{{ title }}</h3>
+                {{ title }}
             </div>
             
             <div class='sub_cont'>
                 <div class='nav_bar' >
-                    
                         <nav-bar></nav-bar>                 
                 </div>
+                
                 <div id='main_cont'> 
+                    <main-bar></main-bar>
                 </div>
             </div>
             
@@ -33,9 +34,12 @@
     <script type='text/javascript' src='/js/controller/navCtrl.js'></script>
     <script type='text/javascript' src='/js/controller/titleCtrl.js'></script>
     <script type='text/javascript' src='/js/directive/nav_directive.js'></script>
+    <script type='text/javascript' src='/js/directive/mainCont_directive.js'></script>
     <script type='text/javascript' src='/js/services/serviceNavigation.js'></script>
     <script type='text/javascript' src='/js/services/service_id.js'></script>
     <script type='text/javascript' src='/js/services/serviceMain.js'></script>
+    
+    
 <!--    <script type='text/javascript' src='/js/directive/title_directive.js'></script>-->
      
 </html>
