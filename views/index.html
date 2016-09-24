@@ -1,45 +1,101 @@
-<html ng-app='app'>
-    <title>CubicBestBuy</title>
-    <body>
-        <div id='container' ng-controller = "navCtrl">
-            
-            <div class='header'>
-            header goes here
-            </div>
-            
-            <div class ='dyn_header' >
-<!--            <title-bar></title-bar>-->
-                {{ title }}
-            </div>
-            
-            <div class='sub_cont'>
-                <div class='nav_bar' >
-                        <nav-bar></nav-bar>                 
-                </div>
-                
-                <div id='main_cont'> 
-                    <main-bar></main-bar>
-                </div>
-            </div>
-            
-            <div class='footer'>footer goes here
-            </div>
-            
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+  <title>Cubic BestBuy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body ng-controller = "navCtrl">
+<!--this part is empty-------------------------------------------------->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Sign up</a>
         </div>
-    </body>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Product</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Deals</a></li> 
+        </ul>
+      </div>
+    </nav>
+<!----------------------------------------------------------------------->
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4> Cubic BestBuy </h4>
+        <div>
+            <nav-bar></nav-bar> <!--navBar for itemtypes -->        
+        </div>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search items..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <img class='cubic' align='right' ng-src='/static/images/WhaDnTb7.png' > 
+      <h3><small>{{ title }}</small></h3> <!--Dynamic heading -->
+        
+      <hr><br>
+      
+      <br> <main-bar></main-bar> <br> <!--mainContent for inventoryItem -->
+      
+        <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+        
+         <br><br>
+      <p><span class="badge">Comments</span> </p><br>
+     
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="/static/images/prajay.jpg" class="img-thumbnail" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Prajay Shakya <small>Sep 23, 2016, 11:34 PM</small></h4>
+          <p>It was fun working in this project </p>
+          <br>
+        </div>
+              <br>
+            
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p> Copyright &copy; 2016 cubic batch. All rights reserved.  </p>
+</footer>
+
+</body>
     <link rel='stylesheet' href='/css/style.css'>
     <link rel='stylesheet' href='/css/nav_style.css'>
+    <link rel='stylesheet' href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    
     <script type='text/javascript' src='/node_modules/angular/angular.js'></script>
     <script type = 'text/javascript' src='/js/module.js'></script>
+    
     <script type='text/javascript' src='/js/controller/navCtrl.js'></script>
     <script type='text/javascript' src='/js/controller/titleCtrl.js'></script>
+    
     <script type='text/javascript' src='/js/directive/nav_directive.js'></script>
     <script type='text/javascript' src='/js/directive/mainCont_directive.js'></script>
+    
     <script type='text/javascript' src='/js/services/serviceNavigation.js'></script>
     <script type='text/javascript' src='/js/services/service_id.js'></script>
     <script type='text/javascript' src='/js/services/serviceMain.js'></script>
-    
-    
-<!--    <script type='text/javascript' src='/js/directive/title_directive.js'></script>-->
-     
 </html>
+
+
+
+

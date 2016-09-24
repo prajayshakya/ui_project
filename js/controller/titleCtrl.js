@@ -1,7 +1,7 @@
 angular.module('app').controller("titleCtrl",["$scope", "titleService","navService","mainService",function($scope, titleService, navService, mainService) {
     //alert();
     
-    $scope.title = "Welcome to BestBuy of Cubic";
+    $scope.title = "Welcome to Bazzar";
     
     $scope.inventoryTitle="";
     $scope.inventoryType="";

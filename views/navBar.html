@@ -1,4 +1,8 @@
 
-<ul class='ul_style' ng-repeat="inventory in inventoryTypes">
-                        <li class='li_style' ng-click="test(inventory.ID, inventory.TYPE)"> {{ inventory.TYPE }} </li>
-                    </ul>
+
+<ul class='ul_style' class="nav nav-pills nav-stacked" ng-repeat="inventory in inventoryTypes">
+                <li class='li_style' ng-click="test(inventory.ID, inventory.TYPE)">
+                {{ inventory.TYPE }} 
+                </li>
+</ul>
+

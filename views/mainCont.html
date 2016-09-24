@@ -1,6 +1,10 @@
-<ul ng-repeat="main in inventoryMain">
-    <li ><img class ='img' ng-src= "{{ main.image }}" ></li>
-    <li > {{ main.name }} </li>
-    <li >price: {{ main.price }} </li>
-    <li > Review<br>{{ main.description }} </li>
+
+<ul ng-repeat="main in inventoryMain" class="nav nav-pills nav-stacked">
+    <br>
+    <li ><img class='img' ng-src= "{{ main.image }}" ></li>
+    <li ><medium><u><b><a href="#"> {{ main.name }}</a></b> </u></medium></li>
+    <li ><large>Price starting from &nbsp </large><medium>{{ main.price }} </medium></li>
+    <li id=font><b> <large>Description</large></b><br><medium>{{ main.description }}</medium> </li>
+    
+    <br><hr>
 </ul>
